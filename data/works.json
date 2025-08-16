@@ -1,0 +1,100 @@
+[
+        {
+            "id": 1,
+            "title": "蝙蝠小怪兽",
+            "description": "灰蓝身子粉脸蛋，小蝙蝠造型超萌，像从童话飞出来。",
+            "imageUrl": "assets/images/works/蝙蝠小怪兽.jpg",
+            "createdDate": "2025/08/15"
+        },
+        {
+            "id": 2,
+            "title": "爱心小纵队",
+            "description": "彩色爱心排排站，带小身子，可爱又像爱心大派对。",
+            "imageUrl": "assets/images/works/爱心小纵队.jpg",
+            "createdDate": "2025/08/15"
+        },
+        {
+            "id": 3,
+            "title": "色彩大爆炸",
+            "description": "彩色线条花朵飞碟等，像打翻颜料盘的奇妙世界。",
+            "imageUrl": "assets/images/works/色彩大爆炸.jpg",
+            "createdDate": "2025/08/15"
+        },
+        {
+            "id": 4,
+            "title": "奇幻小怪物",
+            "description": "彩色怪物大集合，造型奇特，像神秘星球的居民。",
+            "imageUrl": "assets/images/works/奇幻小怪物.jpg",
+            "createdDate": "2025/08/15"
+        },
+        {
+            "id": 5,
+            "title": "花朵仙人掌",
+            "description": "绿仙人掌长黄花，笑脸超治愈，沙漠小可爱来啦。",
+            "imageUrl": "assets/images/works/花朵仙人掌.jpg",
+            "createdDate": "2025/08/15"
+        },
+        {
+            "id": 6,
+            "title": "太阳法官",
+            "description": "太阳造型举天平，配文字，思考生命公平的趣味设计。",
+            "imageUrl": "assets/images/works/太阳法官.jpg",
+            "createdDate": "2025/08/15"
+        },
+        {
+            "id": 7,
+            "title": "暴躁小羊",
+            "description": "拿武器的小羊，红线条显暴躁，反差萌超有趣。",
+            "imageUrl": "assets/images/works/暴躁小羊.jpg",
+            "createdDate": "2025/08/15"
+        },
+        {
+            "id": 8,
+            "title": "树叶小狗",
+            "description": "小狗叼绿叶，尾巴像树叶，清新又可爱的小动物。",
+            "imageUrl": "assets/images/works/树叶小狗.jpg",
+            "createdDate": "2025/08/15"
+        },
+        {
+            "id": 9,
+            "title": "蓝色小龙虾",
+            "description": "蓝身子黄触角，钳子大眼神凶，海洋小\"恶霸\"。",
+            "imageUrl": "assets/images/works/蓝色小龙虾.jpg",
+            "createdDate": "2025/08/15"
+        },
+        {
+            "id": 10,
+            "title": "搞怪圣诞树",
+            "description": "圣诞树有表情，彩灯装饰，节日氛围里的调皮鬼。",
+            "imageUrl": "assets/images/works/搞怪圣诞树.jpg",
+            "createdDate": "2025/08/15"
+        },
+        {
+            "id": 11,
+            "title": "鳄鱼顶兔兔",
+            "description": "绿色鳄鱼头顶小白兔，憨态可掬，奇妙组合超有爱",
+            "imageUrl": "assets/images/works/鳄鱼顶兔兔.jpg",
+            "createdDate": "2025/08/15"
+        },
+        {
+            "id": 12,
+            "title": "3D 小火龙",
+            "description": "经典宝可梦小火龙立体呈现，张牙舞爪超活泼",
+            "imageUrl": "assets/images/works/3D 小火龙.jpg",
+            "createdDate": "2025/08/15"
+        },
+        {
+            "id": 13,
+            "title": "包扎皮卡丘",
+            "description": "皮卡丘被绿绷带缠绕，创意搞怪，像刚历险归来",
+            "imageUrl": "assets/images/works/包扎皮卡丘.jpg",
+            "createdDate": "2025/08/15"
+        },
+        {
+            "id": 14,
+            "title": "蓝怪与石头",
+            "description": "蓝色小怪物站带红纹石头上，造型奇特，神秘又有趣",
+            "imageUrl": "assets/images/works/蓝怪与石头.jpg",
+            "createdDate": "2025/08/15"
+        }
+]

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定制设计 - 牛马手机壳</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        .customize-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .preview-area {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .preview-phone {
+            width: 300px;
+            height: 600px;
+            background: url('assets/images/phone-template.png') center/contain no-repeat;
+            position: relative;
+        }
+
+        .design-preview {
+            position: absolute;
+            width: 85%;
+            height: 75%;
+            top: 12%;
+            left: 7.5%;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .form-column {
+            padding-right: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .color-picker {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .color-option {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .color-option.selected {
+            border-color: #457b9d;
+        }
+    </style>
+</head>
+
+<body class="watermark">
+    <header>
+        <div class="header-container container">
+            <a href="../index.html" class="logo">
+                <img src="../photo/logo1.jpg" alt="牛马手机壳" class="logo-img">
+                <span class="logo-text">牛马手机壳</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="gallery.html">作品集</a></li>
+                <li><a href="products.html">产品定制</a></li>
+                <li><a href="copyright.html">版权声明</a></li>
+                <li><a href="customize.html" class="cta-btn active">定制设计</a></li>
+            </ul>
+            <a href="products.html" style="background-color: #457b9d; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">查看产品</a>
+
+            <div class="menu-toggle" id="mobileMenu">
+                ☰
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div style="background-color: #fff3cd; border: 1px solid #ffeaa7; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+            <h2 style="color: #856404; margin-top: 0;">⚠️ 页面已更新</h2>
+            <p style="color: #856404; margin-bottom: 15px;">
+                此定制设计页面已停止使用，请前往新的产品定制页面进行下单。
+            </p>
+            <a href="products.html" style="background-color: #457b9d; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">
+                前往产品定制页面 →
+            </a>
+        </div>
+
+        <h1>手机壳定制设计（已停用）</h1>
+        
+        <div class="customize-container">
+            <div class="form-column">
+                <form id="design-form" action="https://formspree.io/f/mqazgojj" method="POST">
+                    <div class="form-group">
+                        <label for="design-style">设计风格：</label>
+                        <select id="design-style" class="form-control" name="design-style" required disabled style="opacity: 0.5;">
+                            <option value="">请选择设计风格</option>
+                            <option value="minimalist">极简风格</option>
+                            <option value="vintage">复古风格</option>
+                            <option value="illustration">插画风格</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>边框颜色：</label>
+                        <div class="color-picker">
+                            <div class="color-option" style="background:#ffffff" data-color="#ffffff"></div>
+                            <div class="color-option" style="background:#000000" data-color="#000000"></div>
+                            <div class="color-option" style="background:#457b9d" data-color="#457b9d"></div>
+                        </div>
+                        <input type="hidden" id="border-color" name="border-color" value="#ffffff">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="artwork">选择作品：</label>
+                        <select id="artwork" class="form-control" name="artwork" required disabled style="opacity: 0.5;">
+                            <option value="">请选择设计作品</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">个性文字（最多20字）：</label>
+                        <input type="text" id="message" class="form-control" name="message" maxlength="20" disabled style="opacity: 0.5;">
+                    </div>
+
+                    <button type="submit" class="order-btn" disabled style="opacity: 0.5; cursor: not-allowed;">此页面已停用</button>
+                </form>
+            </div>
+
+            <div class="preview-area">
+                <h3>实时预览</h3>
+                <div class="preview-phone">
+                    <div class="design-preview" id="design-preview"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 牛马手机壳 - 保留所有权利</p>
+        </div>
+    </footer>
+
+    <script>
+        // 页面已停用，禁用所有交互功能
+        console.log('此页面已停用，请前往产品定制页面');
+        
+        // 禁用颜色选择
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.style.cursor = 'not-allowed';
+            option.style.opacity = '0.5';
+        });
+
+        // 不加载作品数据，保持下拉菜单为空
+        document.getElementById('artwork').innerHTML = '<option value="">页面已停用</option>';
+        
+        // 禁用预览更新
+        document.getElementById('design-preview').style.backgroundImage = 'none';
+        document.getElementById('design-preview').innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#999;font-size:14px;">预览功能已停用</div>';
+    </script>
+
+    
+</body>
+</html>

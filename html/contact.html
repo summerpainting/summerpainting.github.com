@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>//联系方式区标题//</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="//自定义字体链接，可留空//" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-container container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon"><img src="../photo/logo1.jpg" width="40" height="40" alt="logo"></span>
+                牛马手机壳
+            </a>
+
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="gallery.html">作品集</a></li>
+                    <li><a href="products.html">产品定制</a></li>
+                    <li><a href="copyright.html">版权声明</a></li>
+                    <li><a href="customize.html" class="cta-btn">定制设计</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-toggle" id="mobileMenu">
+                ☰
+            </div>
+        </div>
+    </header>
+
+    <!-- 联系方式主体 -->
+    <section id="contact" class="section" style="padding-top:120px;">
+        <div class="container">
+            <h2 class="section-title" style="font-size:2.8rem;font-weight:bold;letter-spacing:2px;
+            background:linear-gradient(90deg,#6200ee,#03dac6);
+            -webkit-background-clip:text;background-clip:text;color:transparent;
+            text-shadow:0 4px 24px #bb86fc55;">
+                //联系方式区标题//
+            </h2>
+            <div class="contact-card">
+                <div class="contact-method">
+                    <h3>//联系方式类型1//</h3>
+                    <div class="contact-value">//联系方式内容1//</div>
+                </div>
+                <div class="contact-method">
+                    <h3>//联系方式类型2//</h3>
+                    <div class="contact-value">//联系方式内容2//</div>
+                </div>
+                <!-- 可添加更多联系方式 -->
+            </div>
+            <div style="text-align:center;margin-top:18px;color:#888;">
+                <span style="font-size:1.1rem;">//联系方式补充说明，可选//</span>
+            </div>
+            <!-- 下单入口 -->
+            <div id="order" style="text-align:center;margin-top:40px;">
+                <a href="//下单入口链接或表单地址//" class="order-btn"
+                    style="display:inline-block;padding:16px 40px;font-size:1.2rem;background:linear-gradient(90deg,#6200ee,#03dac6);color:#fff;border-radius:32px;text-decoration:none;box-shadow:0 2px 12px #bb86fc33;transition:background 0.2s;">
+                    //下单//
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p style="font-family:'Montserrat',sans-serif;font-size:1rem;letter-spacing:1px;">
+                //版权信息//
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('mobileMenu').addEventListener('click', function () {
+            document.getElementById('mainNav').classList.toggle('nav-active');
+        });
+
+        // 高亮当前页面导航
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('nav a');
+
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href');
+            if (currentPage === linkPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

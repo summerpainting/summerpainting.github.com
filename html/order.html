@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Order - Handcraft Tech Cases</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon"><img src="../images/logo.png" width="40" height="40" alt="logo"></span>
+                牛马手机壳
+            </a>
+
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="gallery.html">作品集</a></li>
+                    <li><a href="products.html">产品定制</a></li>
+                    <li><a href="copyright.html">版权声明</a></li>
+                    <li><a href="customize.html" class="cta-btn">定制设计</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-toggle" id="mobileMenu">
+                ☰
+            </div>
+        </div>
+    </header>
+    <main style="padding-top:80px;">
+        <section style="max-width:520px;margin:0 auto 48px auto;padding:0 24px;">
+            <div style="background-color: #fff3cd; border: 1px solid #ffeaa7; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+                <h2 style="color: #856404; margin-top: 0;">⚠️ 页面已更新</h2>
+                <p style="color: #856404; margin-bottom: 15px;">
+                    此订单页面已停止使用，请前往新的产品定制页面进行下单。
+                </p>
+                <a href="products.html" style="background-color: #457b9d; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">
+                    前往产品定制页面 →
+                </a>
+            </div>
+
+            <!-- 步骤指示器 -->
+            <div style="display:flex;gap:24px;margin-bottom:32px;">
+                <div
+                    style="flex:1;text-align:center;font-size:16px;padding-bottom:6px;border-bottom:2px solid #0078D7;font-weight:700;color:#0078D7;">
+                    1. Artwork
+                </div>
+                <div
+                    style="flex:1;text-align:center;font-size:16px;padding-bottom:6px;border-bottom:2px solid #EAEAEA;font-weight:700;color:#888;">
+                    2. Details
+                </div>
+                <div
+                    style="flex:1;text-align:center;font-size:16px;padding-bottom:6px;border-bottom:2px solid #EAEAEA;font-weight:700;color:#888;">
+                    3. Contact
+                </div>
+            </div>
+            <!-- 表单区 -->
+            <form style="display:flex;flex-direction:column;gap:24px;">
+                <div>
+                    <label style="font-weight:600;display:block;margin-bottom:8px;">Artwork</label>
+                    <input type="text" id="artwork-input" name="artwork" readonly
+                           style="padding:8px;border:1px solid #ddd;border-radius:4px;width:100%;" disabled>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('mobileMenu').addEventListener('click', function () {
+            document.getElementById('mainNav').classList.toggle('nav-active');
+        });
+
+        // 高亮当前页面导航
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('nav a');
+
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href');
+            if (currentPage === linkPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+        // 从URL参数获取作品信息并自动填充
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const artworkId = urlParams.get('artwork');
+            const artworkTitle = urlParams.get('title');
+            
+            if (artworkId && artworkTitle) {
+                const artworkInput = document.getElementById('artwork-input');
+                artworkInput.value = `${artworkTitle} (ID: ${artworkId})`;
+                artworkInput.dataset.workId = artworkId;
+            } else {
+                // 如果没有参数，使用默认值
+                document.getElementById('artwork-input').value = ' ';
+            }
+        });
+    </script>
+</body>
+
+</html>
